@@ -8,19 +8,19 @@ This system is a simple schedule planner that allows you to manage free and busy
 
 ## Table of Contents
 
-  - [Schedule Management System](https://www.google.com/search?q=%23schedule-management-system)
-      - [Table of Contents](https://www.google.com/search?q=%23table-of-contents)
-      - [Overview](https://www.google.com/search?q=%23overview)
-      - [Project Structure](https://www.google.com/search?q=%23project-structure)
-      - [Installation](https://www.google.com/search?q=%23installation)
-      - [Usage](https://www.google.com/search?q=%23usage)
-          - [Example Usage](https://www.google.com/search?q=%23example-usage)
-      - [Running Tests](https://www.google.com/search?q=%23running-tests)
-      - [Classes and Their Functionality](https://www.google.com/search?q=%23classes-and-their-functionality)
-          - [`Time`](https://www.google.com/search?q=%23time)
-          - [`Slot`](https://www.google.com/search?q=%23slot)
-          - [`Day`](https://www.google.com/search?q=%23day)
-          - [`Scheduler`](https://www.google.com/search?q=%23scheduler)
+  - [Schedule Management System](#schedule-management-system)
+      - [Table of Contents](#table-of-contents)
+      - [Overview](#overview)
+      - [Project Structure](#project-structure)
+      - [Installation](#installation)
+      - [Usage](#usage)
+          - [Example Usage](#example-usage)
+      - [Running Tests](#running-tests)
+      - [Classes and Their Functionality](#classes-and-their-functionality)
+          - [`Time`](#time)
+          - [`Slot`](#slot)
+          - [`Day`](#day)
+          - [`Scheduler`](#scheduler)
 
 ## Overview
 
