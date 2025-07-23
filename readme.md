@@ -78,6 +78,8 @@ python main.py
 
 `main.py` contains an example of initializing the `Scheduler` from a JSON string and prints various results, such as busy slots, free slots, availability checks, and finding a slot by duration.
 
+#### With JSON
+
 ```python
 # Example from main.py
 from scheduler import Scheduler
@@ -102,6 +104,24 @@ if __name__ == "__main__":
     print("Free slots on 2024-10-10:", scheduler.get_free_slots("2024-10-10"))
     print("Is 2024-10-10 from 10:00 to 10:30 available?", scheduler.is_available("2024-10-10", "10:00", "10:30"))
     print("Is 2024-10-10 from 11:30 to 12:30 available?", scheduler.is_available("2024-10-10", "11:30", "12:30"))
+    print("Find a slot for 60 minutes:", scheduler.find_slot_for_duration(duration_minutes=60))
+```
+
+#### With URL
+
+```python
+# Example from main.py
+from scheduler import Scheduler
+import json
+
+if __name__ == "__main__":
+    url = "https://ofc-test-01.tspb.su/test-task/"
+    scheduler = Scheduler(url=url)
+
+    print("Busy slots on 2025-02-15:", scheduler.get_busy_slots("2025-02-15"))
+    print("Free slots on 2025-02-15:", scheduler.get_free_slots("2025-02-15"))
+    print("Is 2025-02-15 from 10:00 to 10:30 available?", scheduler.is_available("2025-02-15", "10:00", "10:30"))
+    print("Is 2025-02-15 from 11:30 to 12:30 available?", scheduler.is_available("2025-02-15", "11:30", "12:30"))
     print("Find a slot for 60 minutes:", scheduler.find_slot_for_duration(duration_minutes=60))
 ```
 
