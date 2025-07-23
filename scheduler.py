@@ -9,17 +9,20 @@ class Scheduler:
     days: dict
 
     def __init__(self, url=None, json=None):
-        # response = requests.get(url)
-        # if response.status_code != 200:
-        #     raise HTTPError(response=response)
-        # response: dict = response.json()
-        # days: list[dict] = response.get("days")
-        # timeslots: list[dict] = response.get("timeslots")
-        # if days is None or timeslots is None:
-        #     raise Exception(days, timeslots)
+        if json is not None:
+            days = json.get("days")
+            timeslots = json.get("timeslots")
+        else:
+            response = requests.get(url)
+            if response.status_code != 200:
+                raise HTTPError(response=response)
+            response: dict = response.json()
+            days: list[dict] = response.get("days")
+            timeslots: list[dict] = response.get("timeslots")
+            if days is None or timeslots is None:
+                raise Exception(days, timeslots)
 
-        days = json.get("days")
-        timeslots = json.get("timeslots")
+        
 
         days_by_id: dict[Day] = {}
         for day in days:
